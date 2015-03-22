@@ -147,7 +147,7 @@ B5500LinePrinter.prototype.appendLine = function appendLine(text) {
 /**************************************/
 B5500LinePrinter.prototype.printLine = function printLine(text, control) {
     /* Prints one line to the "paper", handling carriage control and greenbar
-    group completion. For now, SPACE 0 (overprintng) is treated as single-spacing */
+    group completion. For now, SPACE 0 (overprinting) is treated as single-spacing */
     var lines = 1;
 
     this.appendLine(text || "\xA0");
@@ -238,7 +238,7 @@ B5500LinePrinter.prototype.LPStopBtn_onclick = function LPStopBtn_onclick(ev) {
 
 /**************************************/
 B5500LinePrinter.prototype.LPSpaceBtn_onclick = function LPSpaceBtn_onclick(ev) {
-    /* Handle the click event for the Skip To Heading button */
+    /* Handle the click event for the Space button */
 
     if (!this.ready) {
         this.formFeedCount = 0;
@@ -266,7 +266,7 @@ B5500LinePrinter.prototype.LPEndOfPaperBtn_onclick = function LPEndOfPaperBtn_on
     and end-of-paper condition, this will make the printer ready, but it will
     still be in an EOP condition. The next time a print line is received, the
     EOP condition will force it not-ready again. You can print only one line
-    at a time (presumably to the end of the current page. The EOP condition can
+    at a time (presumably to the end of the current page). The EOP condition can
     be cleared by clicking Skip To Heading three times to "rip" the paper */
 
     if (this.paperLeft <= 0 && !this.ready) {
