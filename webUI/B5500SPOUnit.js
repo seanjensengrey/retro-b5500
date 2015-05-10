@@ -212,7 +212,8 @@ B5500SPOUnit.prototype.printChar = function printChar(c) {
         line += s;
         ++this.printCol;
     } else {
-         line = line.substring(0, 71) + s;
+         line = s;
+         this.appendEmptyLine();
     }
     this.paper.lastChild.nodeValue = line;
 };
@@ -400,7 +401,7 @@ B5500SPOUnit.prototype.keyDown = function keyDown(ev) {
 B5500SPOUnit.prototype.copyPaper = function copyPaper(ev) {
     /* Copies the text contents of the "paper" area of the SPO, opens a new
     temporary window, and pastes that text into the window so it can be copied
-    or saved */
+    or saved by the user */
     var text = ev.target.textContent;
     var title = "B5500 " + this.mnemonic + " Text Snapshot";
     var win = window.open("./B5500FramePaper.html", this.mnemonic + "-Snapshot",
@@ -501,8 +502,8 @@ B5500SPOUnit.prototype.spoOnload = function spoOnload() {
 
     this.printText("retro-B5500 Emulator Version " + B5500CentralControl.version,
             B5500CentralControl.bindMethod(this, function initFinish() {
-        //window.open("", "B5500Console").focus();
         this.window.focus();
+        window.open("", "B5500Console").focus();
         this.setRemote();
         this.appendEmptyLine("\xA0");
         this.endOfPaper.scrollIntoView();

@@ -99,15 +99,15 @@ BUTTON {
     border-radius:      4px}
 
 BUTTON.whiteButton {
-    background-image:   radial-gradient(circle, #666, #999);
+    background-color:   #999;
     color:              black}
 
 BUTTON.greenButton {
-    background-image:   radial-gradient(circle, #030, #060);
+    background-color:   #060;
     color:              white}
 
 BUTTON.redButton {
-    background-image:   radial-gradient(circle, #600, #900);
+    background-color:   #900;
     color:              white}
 
 BUTTON.blackButton {
@@ -115,36 +115,36 @@ BUTTON.blackButton {
     color:              #999}
 
 BUTTON.yellowButton {
-    background-image:   radial-gradient(circle, #660, #990, #990);
+    background-color:   #990;
     color:              black}
 
 BUTTON.whiteLit {
-    background-image:   radial-gradient(circle, #FFF, #FFF, #CCC);
-    color:              black}
+    color:              black;
+    background-color:   white}
 
 BUTTON.blackLit {
     color:              white}
 
 BUTTON.greenLit {
     color:              black;
-    background-image:   radial-gradient(circle, #0F0, #0F0, #0C0)}
+    background-color:   #0F0}
 
 BUTTON.redLit {
     color:              black;
-    background-image:   radial-gradient(circle, #F00, #F00, #C00)}
+    background-color:   #F00}
 
 BUTTON.yellowLit {
-    background-image:   radial-gradient(circle, #FF0, #CC0)}
+    background-color:   #FF0}
 BUTTON.yellowLit5 {
-    background-image:   radial-gradient(circle, #EE0, #BB0)}
+    background-color:   #EE0}
 BUTTON.yellowLit4 {
-    background-image:   radial-gradient(circle, #DD0, #AA0)}
+    background-color:   #DD0}
 BUTTON.yellowLit3 {
-    background-image:   radial-gradient(circle, #CC0, #AA0)}
+    background-color:   #CC0}
 BUTTON.yellowLit2 {
-    background-image:   radial-gradient(circle, #BB0, #990)}
+    background-color:   #BB0}
 BUTTON.yellowLit1 {
-    background-image:   radial-gradient(circle, #AA0, #990)}
+    background-color:   #AA0}
 
 BUTTON.blackBorder {
     border:             1px solid black}
